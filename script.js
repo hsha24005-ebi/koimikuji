@@ -13,6 +13,13 @@ const result = document.getElementById("ryu")
 button.addEventListener("click", function () {
 
     const randomNumber = Math.floor(Math.random() * fortunes.length);
+    const resultText = fortunes[(randomNumber)]
 
     result.textContent = fortunes[(randomNumber)];
-})
+
+    if (resultText.includes("大吉"))　{
+        result.style.color = "blue" ;
+    } else {
+        result.style.color = "black"
+    }
+});
